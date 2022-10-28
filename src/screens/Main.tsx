@@ -1,13 +1,18 @@
 import React from 'react';
-import {StyleSheet, Text, View} from "react-native";
+import {StyleSheet, Text, View, Button} from "react-native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
+import {useNavigation} from "@react-navigation/native";
 
 function HomeScreen() {
+    const navigation = useNavigation()
+    
     return (
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <Text>Home Screen</Text>
             <Text>Home Screen</Text>
             <Text>Home Screen</Text>
+            <Button title={'to Users'} onPress={() => {
+            }}/>
         </View>
     );
 }
