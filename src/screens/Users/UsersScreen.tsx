@@ -9,7 +9,7 @@ export function UsersScreen() {
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <Text>Users Screen</Text>
             <Button title={'To Details'} onPress={() => {
-                navigation.navigate('Details', {id: 1, isDone: true, name: 'Kalinara'})
+                navigation.navigate('Details')
             }}/>
         </View>
     );
