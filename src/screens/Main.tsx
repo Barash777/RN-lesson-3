@@ -5,22 +5,28 @@ import {useNavigation} from "@react-navigation/native";
 
 function HomeScreen() {
     const navigation = useNavigation()
-    
+
     return (
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <Text>Home Screen</Text>
             <Text>Home Screen</Text>
             <Text>Home Screen</Text>
-            <Button title={'to Users'} onPress={() => {
+            <Button title={'To Users'} onPress={() => {
+                navigation.navigate('Users')
             }}/>
         </View>
     );
 }
 
 function UsersScreen() {
+    const navigation = useNavigation()
+
     return (
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <Text>Users Screen</Text>
+            <Button title={'To Home'} onPress={() => {
+                navigation.navigate('Home')
+            }}/>
         </View>
     );
 }
