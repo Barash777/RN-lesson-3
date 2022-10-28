@@ -1,8 +1,8 @@
-import {NavigationProp, useNavigation} from "@react-navigation/native";
+import {NavigationProp, NavigatorScreenParams, useNavigation} from "@react-navigation/native";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 
-export type StackParamList = {
-    Home: undefined
+export type BottomTabParamList = {
+    Home: NavigatorScreenParams<NStackParamList>
     Users: undefined
     Details: {
         id: number
@@ -11,8 +11,14 @@ export type StackParamList = {
     }
 }
 
-export type DetailsPropsType = NativeStackScreenProps<StackParamList, 'Details'>
+export type NStackParamList = {
+    Profile: undefined
+    Settings: undefined
+    Jobs: undefined
+}
 
-type UseNavigationType = NavigationProp<StackParamList>
+export type DetailsPropsType = NativeStackScreenProps<BottomTabParamList, 'Details'>
+
+type UseNavigationType = NavigationProp<BottomTabParamList>
 
 export const useAppNavigation = () => useNavigation<UseNavigationType>()
