@@ -24,6 +24,19 @@ function UsersScreen() {
     return (
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <Text>Users Screen</Text>
+            <Button title={'To Details'} onPress={() => {
+                navigation.navigate('Details')
+            }}/>
+        </View>
+    );
+}
+
+function DetailsScreen() {
+    const navigation = useNavigation()
+
+    return (
+        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+            <Text>Details Screen</Text>
             <Button title={'To Home'} onPress={() => {
                 navigation.navigate('Home')
             }}/>
@@ -36,9 +49,12 @@ const Stack = createNativeStackNavigator();
 export const Main = () => {
     return (
         <View style={styles.container}>
-            <Stack.Navigator>
+            <Stack.Navigator
+                // initialRouteName={'Users'}
+            >
                 <Stack.Screen name={'Home'} component={HomeScreen}/>
                 <Stack.Screen name={'Users'} component={UsersScreen}/>
+                <Stack.Screen name={'Details'} component={DetailsScreen}/>
             </Stack.Navigator>
         </View>
     );
