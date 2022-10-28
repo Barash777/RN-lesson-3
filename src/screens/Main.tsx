@@ -5,8 +5,10 @@ import {HomeScreen} from "./Home/HomeScreen";
 import {UsersScreen} from "./Users/UsersScreen";
 import {DetailsScreen} from "./Details/DetailsScreen";
 import {StackParamList} from "./types";
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 
-const Stack = createNativeStackNavigator<StackParamList>();
+// const Stack = createNativeStackNavigator<StackParamList>();
+const Stack = createBottomTabNavigator<StackParamList>();
 
 export const Main = () => {
     return (
