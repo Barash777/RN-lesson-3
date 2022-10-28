@@ -1,4 +1,5 @@
 import {NavigationProp, useNavigation} from "@react-navigation/native";
+import {NativeStackScreenProps} from "@react-navigation/native-stack";
 
 export type StackParamList = {
     Home: undefined
@@ -9,6 +10,8 @@ export type StackParamList = {
         isDone: boolean
     }
 }
+
+export type DetailsPropsType = NativeStackScreenProps<StackParamList, 'Details'>
 
 type UseNavigationType = NavigationProp<StackParamList>
 
