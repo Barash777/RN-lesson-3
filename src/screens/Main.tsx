@@ -6,9 +6,11 @@ import {UsersScreen} from "./Users/UsersScreen";
 import {DetailsScreen} from "./Details/DetailsScreen";
 import {StackParamList} from "./types";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import {createDrawerNavigator} from "@react-navigation/drawer";
 
 // const Stack = createNativeStackNavigator<StackParamList>();
-const Stack = createBottomTabNavigator<StackParamList>();
+// const Stack = createBottomTabNavigator<StackParamList>();
+const Stack = createDrawerNavigator<StackParamList>();
 
 export const Main = () => {
     return (
