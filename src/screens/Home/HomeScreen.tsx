@@ -13,7 +13,7 @@ export function HomeScreen() {
 
     return (
         <View style={{flex: 1}}>
-            <Stack.Navigator>
+            <Stack.Navigator screenOptions={{animation: "fade_from_bottom"}}>
                 <Stack.Screen name={'Profile'} component={ProfileScreen}/>
                 <Stack.Screen name={'Jobs'} component={JobsScreen}/>
                 <Stack.Screen name={'Settings'} component={SettingsScreen}/>

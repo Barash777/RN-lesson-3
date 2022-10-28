@@ -15,9 +15,7 @@ const Stack = createBottomTabNavigator<BottomTabParamList>();
 export const Main = () => {
     return (
         <View style={styles.container}>
-            <Stack.Navigator
-                // initialRouteName={'Users'}
-            >
+            <Stack.Navigator screenOptions={{tabBarActiveTintColor: 'blue'}}>
                 <Stack.Screen name={'Home'} component={HomeScreen}/>
                 <Stack.Screen name={'Users'} component={UsersScreen}/>
                 <Stack.Screen name={'Details'} component={DetailsScreen}/>
